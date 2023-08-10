@@ -19,9 +19,9 @@ fetch(url)
 .then(res => res.json())
 .then(data => {
 let dollar = data["rates"]["INR"]
-let n = parseInt(amt.value);
+let n = parsefloat(amt.value);
 let r = n*dollar;
-ans.innerHTML = r;
+ans.innerHTML = "\u20B9"+ r.toFixed(2);
 })
 .catch(err => ans.innerHTML = "issue" + err);
 }
